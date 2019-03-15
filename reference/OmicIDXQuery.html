@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">OmicIDXR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -124,13 +124,63 @@
     <p>An object of class <code>R6ClassGenerator</code> of length 24.</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'># create a client</span>
+<span class='no'>cli</span> <span class='kw'>=</span> <span class='no'>OmicIDXGraphqlClient</span>$<span class='fu'>new</span>()
+
+<span class='co'># create a query container</span>
+<span class='no'>qc</span> <span class='kw'>=</span> <span class='no'>OmicIDXQuery</span>$<span class='fu'>new</span>()
+
+<span class='no'>qc</span>$<span class='fu'>query</span>(<span class='st'>'allSraStudies'</span>, <span class='st'>'
+{ allSraStudies
+  {
+    edges {
+      node {
+        accession
+        bioproject
+        gse
+        title
+        status
+        updated
+      }
+    }
+  }
+}
+'</span>)
+
+<span class='no'>results</span> <span class='kw'>=</span> <span class='fu'>dataframe_handler</span>(<span class='no'>cli</span>$<span class='fu'>exec</span>(<span class='no'>qc</span>$<span class='no'>queries</span>$<span class='no'>allSraStudies</span>))
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/dim'>dim</a></span>(<span class='no'>results</span>)</div><div class='output co'>#&gt; [1] 500   6</div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>results</span>)</div><div class='output co'>#&gt;   node.accession node.bioproject node.gse
+#&gt; 1      DRP000001      PRJDA38027       NA
+#&gt; 2      DRP000002      PRJDA39275       NA
+#&gt; 3      DRP000003      PRJDA34559       NA
+#&gt; 4      DRP000004      PRJDA34559       NA
+#&gt; 5      DRP000005      PRJDA34559       NA
+#&gt; 6      DRP000006      PRJDA34559       NA
+#&gt;                                                                                                                                 node.title
+#&gt; 1                                                                         Bacillus subtilis subsp. natto BEST195 genome sequencing project
+#&gt; 2                                                                      Model organism for prokaryotic cell differentiation and development
+#&gt; 3                                                Comprehensive identification and characterization of the nucleosome             structure
+#&gt; 4 Comprehensive identification and characterization of the transcripts, their             expression levels and sub-cellular localizations
+#&gt; 5 Comprehensive identification and characterization of the transcripts, their             expression levels and sub-cellular localizations
+#&gt; 6 Comprehensive identification and characterization of the transcripts, their             expression levels and sub-cellular localizations
+#&gt;   node.status        node.updated
+#&gt; 1        live 2019-01-25T16:06:49
+#&gt; 2        live 2017-09-17T10:08:49
+#&gt; 3        live 2017-09-17T09:55:19
+#&gt; 4        live 2017-09-17T09:55:20
+#&gt; 5        live 2017-09-17T09:55:19
+#&gt; 6        live 2017-09-17T09:55:21</div><div class='input'>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
