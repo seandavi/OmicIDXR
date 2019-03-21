@@ -23,8 +23,8 @@ Imports:
     jsonlite
 VignetteBuilder: knitr
 Suggests: BiocStyle, knitr, rmarkdown, httr
-Url: https://github.com/seandavi/OmicIDXR
-BugReport: https://github.com/seandavi/OmicIDXR/issues/new
+URL: https://github.com/seandavi/OmicIDXR
+BugReports: https://github.com/seandavi/OmicIDXR/issues/new
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
