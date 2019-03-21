@@ -9,6 +9,13 @@ genomics data repositories. Through bulk access to these metadata, we hope to:
 - Provide a platform for enhancing metadata
 - Offer high-performance API access as well as bulk downloads of processed genomic metadata
 
+## Install
+
+```
+BiocManager::install('seandavi/OmicIDXR')
+```
+
+
 # Introduction to the OmicIDX API
 
 OmicIDX parses and then serves public genomics repository metadata. These metadata
