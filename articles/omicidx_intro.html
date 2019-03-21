@@ -30,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">OmicIDXR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -58,7 +58,14 @@
   </ul>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/seandavi/OmicIDXR">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -75,7 +82,7 @@
             
             <h4 class="date">3/14/2019</h4>
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/seandavi/OmicIDXR/blob/master/vignettes/omicidx_intro.Rmd"><code>vignettes/omicidx_intro.Rmd</code></a></small>
       <div class="hidden name"><code>omicidx_intro.Rmd</code></div>
 
     </div>
@@ -259,7 +266,7 @@
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">resp =<span class="st"> </span>httr<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/httr/topics/POST">POST</a></span>(endpoint, <span class="dt">body =</span> post_body, <span class="dt">encode =</span> <span class="st">'json'</span>)</a>
 <a class="sourceLine" id="cb13-2" data-line-number="2">resp</a></code></pre></div>
 <pre><code>## Response [http://graphql-omicidx.cancerdatasci.org/graphql]
-##   Date: 2019-03-15 21:24
+##   Date: 2019-03-21 18:33
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 3.84 kB</code></pre>
