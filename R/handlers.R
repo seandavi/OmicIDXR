@@ -24,5 +24,5 @@ raw_handler = function(res) {
 #'
 #' @export
 dataframe_handler = function(res) {
-  return(jsonlite::fromJSON(res, simplifyDataFrame = TRUE, flatten=TRUE)$data[[1]]$edges)
+  return(jsonlite::fromJSON(res, simplifyDataFrame = TRUE, flatten=TRUE)$data[[1]])
 }
